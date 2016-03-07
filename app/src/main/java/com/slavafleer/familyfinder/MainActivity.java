@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 credentialsProvider);
 
         // Create a record in a dataset and synchronize with the server
-        Dataset dataset = syncClient.openOrCreateDataset("identityDataset");
+        Dataset dataset = syncClient.openOrCreateDataset("xxx");
         dataset.put(AWSConstants.KEY_NAME, name);
         dataset.put(AWSConstants.KEY_FAMILY_ROLE, familyRole);
         dataset.synchronize(new DefaultSyncCallback() {
