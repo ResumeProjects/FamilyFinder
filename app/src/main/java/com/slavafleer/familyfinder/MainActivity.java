@@ -56,11 +56,7 @@ public class MainActivity extends AppCompatActivity {
                 credentialsProvider);
 
         // Create a record in a dataset and synchronize with the server
-<<<<<<< HEAD
         Dataset dataset = syncClient.openOrCreateDataset("myDataset");
-=======
-        Dataset dataset = syncClient.openOrCreateDataset("xxx");
->>>>>>> refs/remotes/origin/dvir
         dataset.put(AWSConstants.KEY_NAME, name);
         dataset.put(AWSConstants.KEY_FAMILY_ROLE, familyRole);
         dataset.synchronize(new DefaultSyncCallback() {
@@ -68,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
             public void onSuccess(Dataset dataset, List newRecords) {
                 //Your handler code here
                 Log.i(TAG, "User: " + name + "was updated");
+                Log.i(TAG, "TEST");
             }
         });
     }
